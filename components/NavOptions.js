@@ -1,6 +1,6 @@
 import { StyleSheet, View, Text, FlatList, TouchableOpacity, Image } from 'react-native'
 import React from 'react'
-import { Icon } from "@rneui/themed";
+import Icon from 'react-native-vector-icons/AntDesign';
 
 
 const data = [
@@ -33,11 +33,9 @@ export default function NavOptions() {
                     source={{uri : item.image}} 
                     />
                     <Text style={{paddingTop:8, fontWeight: 'bold'}}>{item.title}</Text>
-                    <Icon  
-                        style={{width:40, padding:8, marginTop:16, backgroundColor: '#000',  borderRadius:24}} 
-                        name='arrowright'
-                        type='antdesign'
-                        color='white' />
+                    <View style={styles.iconElt}>
+                    <Icon name="arrowright" size={20} color="#fff" />
+                    </View>
                 </View>
             </TouchableOpacity>
         )}
@@ -52,7 +50,7 @@ const styles = StyleSheet.create({
         padding: 8, 
         paddingLeft: 16, 
         paddingTop:12, 
-        paddingBottom:24, 
+        paddingBottom:20, 
         backgroundColor:'#D0D0E0',
         width: 130,
         margin:8
@@ -61,5 +59,12 @@ const styles = StyleSheet.create({
         width :120, 
         height: 120, 
         resizeMode: 'contain'
+    },
+    iconElt:{
+        width:36, 
+        padding:8, 
+        marginTop:16, 
+        backgroundColor: '#000',  
+        borderRadius:24
     }
 });

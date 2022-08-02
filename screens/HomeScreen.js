@@ -5,7 +5,7 @@ import NavOptions from '../components/NavOptions'
 
 const HomeScreen = () => {
   return (
-    <SafeAreaView style={{backgroundColor: '#fff', marginTop:28}}>
+    <SafeAreaView style={{backgroundColor: '#fff', marginTop:20}}>
         <View style={{padding: 20}}>
             <Image 
               style={{width :100 , height: 100, resizeMode: 'contain'}} 
