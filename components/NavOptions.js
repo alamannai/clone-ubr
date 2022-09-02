@@ -1,6 +1,7 @@
 import { StyleSheet, View, Text, FlatList, TouchableOpacity, Image } from 'react-native'
 import React from 'react'
 import Icon from 'react-native-vector-icons/AntDesign';
+import { useNavigation } from '@react-navigation/native';
 
 
 const data = [
@@ -19,6 +20,7 @@ const data = [
 ]
 
 export default function NavOptions() {
+    const navigation = useNavigation();
   return (
     <View>
       <FlatList
@@ -26,7 +28,7 @@ export default function NavOptions() {
         horizontal
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => (
-            <TouchableOpacity style={styles.btnOption}>
+            <TouchableOpacity style={styles.btnOption} onPress={() => navigation.navigate(item.screen)}>
                 <View>
                     <Image 
                     style={styles.imageElt} 
